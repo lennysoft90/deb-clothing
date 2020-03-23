@@ -30,6 +30,11 @@ const INITIAL_STATE = {
             cartItem => cartItem.id !== action.payload.id
           )
         };
+      case CartActionTypes.CLEAR_CART :
+        return {
+          ...state,
+          cartItems: []
+        }  
       default:
         return state;
     }
